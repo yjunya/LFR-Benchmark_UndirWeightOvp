@@ -150,7 +150,8 @@ int print_network(deque<set<int> > & E, const deque<deque<int> > & member_list, 
 	cout<<"\naverage mixing parameter (topology): "<< average_func(double_mixing)<<" +/- "<<sqrt(variance_func(double_mixing))<<endl;
 	cout<<"p_in: "<<density<<"\tp_out: "<<sparsity<<endl;
 
-	
+
+
 	
 	ofstream statout(fnameStatistics.c_str());
 	
@@ -158,17 +159,17 @@ int print_network(deque<set<int> > & E, const deque<deque<int> > & member_list, 
 	for (int i=0; i<E.size(); i++)
 		degree_seq.push_back(E[i].size());
 	
+
 	statout<<"degree distribution (probability density function of the degree in logarithmic bins) "<<endl;
 	log_histogram(degree_seq, statout, 10);
 	statout<<"\ndegree distribution (degree-occurrences) "<<endl;
-	int_histogram(degree_seq, statout);
+	int_histogram(degree_seq, statout); // error(jun)
 	statout<<endl<<"--------------------------------------"<<endl;
 
 		
 	statout<<"community distribution (size-occurrences)"<<endl;
 	int_histogram(num_seq, statout);
 	statout<<endl<<"--------------------------------------"<<endl;
-
 	statout<<"mixing parameter (topology)"<<endl;
 	not_norm_histogram(double_mixing, statout, 20, 0, 0);
 	statout<<endl<<"--------------------------------------"<<endl;

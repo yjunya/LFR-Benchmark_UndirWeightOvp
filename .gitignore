@@ -27,3 +27,10 @@
 *.exe
 *.out
 *.app
+
+# add(jun)
+benchmark
+community.dat
+network.dat
+seed.txt
+statistics.dat

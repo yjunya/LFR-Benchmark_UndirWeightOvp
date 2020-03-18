@@ -1,0 +1,13 @@
+ls
+LICENSE
+README.md
+Sources
+benchmark
+community.dat
+flags.dat
+flags_new-m.dat
+makefile
+network.dat
+seed.txt
+statistics.dat
+test.txt

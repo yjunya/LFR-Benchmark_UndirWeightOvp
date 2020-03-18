@@ -639,6 +639,9 @@ int int_histogram (vector <int> &c, ostream & out) {
 	prints(hist, out);
 
 
+	// add (jun)
+	return 0;
+
 
 }
 
@@ -667,6 +670,8 @@ int int_histogram (deque <int> &c, ostream & out) {
 	
 	prints(hist, out);
 
+	// add (jun)
+	return 0;
 
 
 }
